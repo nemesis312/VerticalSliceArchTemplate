@@ -19,8 +19,14 @@ namespace VerticalSliceArch.Application.Features.Users.Queries
 
             public async Task<UserDto> Handle(GetUserQuery request, CancellationToken cancellationToken)
             {
-                var query = "SELECT Id, Name, Email FROM Users WHERE Id = @UserId";
-                var user = await _dbConnection.QueryFirstOrDefaultAsync<UserDto>(query, new { request.UserId });
+                var user = new UserDto()
+                {
+                    Id = 1,
+                    Name = "John Doe",
+                    Email = "test@test.com"
+                };
+                // var query = "SELECT Id, Name, Email FROM Users WHERE Id = @UserId";
+                // var user = await _dbConnection.QueryFirstOrDefaultAsync<UserDto>(query, new { request.UserId });
 
                 return user;
             }

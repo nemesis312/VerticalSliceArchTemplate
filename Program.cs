@@ -1,12 +1,18 @@
 using System.Data;
 using System.Data.SqlClient;
 using VerticalSliceArch.Application.Features.Users.Command;
+using VerticalSliceArch.Features.TimeConvertion.Infrastructure.Services;
 using VerticalSliceArch.Infrastructure.Middlewares;
+using VerticalSliceArch.Infrastructure.Services;
+using VerticalSliceArch.Infrastructure.Services.shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<ITenantService, TenantService>();
 builder.Services.AddTransient<ITenantHelper, TenantHelper>();
+builder.Services.AddTransient<ITimeConversionService, TimeConversionService>();
+
 
 //MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateUserCommand).Assembly));

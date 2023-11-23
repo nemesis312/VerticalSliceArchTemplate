@@ -19,8 +19,13 @@ public class TenantService : ITenantService
         {
             return (int)tenantId;
         }
+        else
+        {
+            //return default tenant 1, this is for testing purposes
+            return 1;
+        }
 
-        throw new InvalidOperationException("TenantId no está disponible.");
+        // throw new InvalidOperationException("TenantId no está disponible.");
     }
 }
 
