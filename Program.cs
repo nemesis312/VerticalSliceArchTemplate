@@ -15,7 +15,7 @@ builder.Services.AddTransient<ITimeConversionService, TimeConversionService>();
 
 
 //MediatR
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateUserCommand).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
 
 
 // Registra IDbConnection para Dapper - asumiendo una cadena de conexión por defecto

@@ -5,7 +5,7 @@ using VerticalSliceArch.Application.Features.Users.Queries;
 using VerticalSliceArch.Infrastructure.Services.shared;
 using UserDto = VerticalSliceArch.Domain.DTOs.UserDto;
 
-namespace VerticalSliceArch.Presentation.Controllers;
+namespace VerticalSliceArch.Features.Users.Presentation.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class UserController: ControllerBase
