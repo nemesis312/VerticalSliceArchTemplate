@@ -44,6 +44,6 @@ msbuild.wrn
 *.suo
 *.user
 _ReSharper.*
-bin
-obj
-packages
+bin/
+obj/
+packages/
