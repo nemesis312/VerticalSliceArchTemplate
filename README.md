@@ -45,7 +45,3 @@ Contributions to enhance this template are welcome. Please read our contributing
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to adjust this description according to the specific features and aspects of your project. It's important to provide enough information to help users understand what your project does, how to set it up, and how to contribute.
