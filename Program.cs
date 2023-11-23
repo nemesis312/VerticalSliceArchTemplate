@@ -1,6 +1,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using VerticalSliceArch.Application.Features.Users.Command;
+using VerticalSliceArch.Features.Pokemon.Infrastructure.Services;
 using VerticalSliceArch.Features.TimeConvertion.Infrastructure.Services;
 using VerticalSliceArch.Infrastructure.Middlewares;
 using VerticalSliceArch.Infrastructure.Services;
@@ -12,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<ITenantService, TenantService>();
 builder.Services.AddTransient<ITenantHelper, TenantHelper>();
 builder.Services.AddTransient<ITimeConversionService, TimeConversionService>();
+builder.Services.AddTransient<IPokemonService, PokemonService>();
 
 
 //MediatR
