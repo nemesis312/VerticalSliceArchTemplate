@@ -9,15 +9,15 @@
     <ItemGroup>
         <PackageReference Include="Dapper" Version="2.1.24" />
         <PackageReference Include="MediatR" Version="12.2.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.AspNetCore" Version="6.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Application\Common\" />
       <Folder Include="Application\Features\Users\Mapping\" />
-      <Folder Include="Domain\" />
-      <Folder Include="Infrastructure\" />
       <Folder Include="Presentation\" />
     </ItemGroup>
 
