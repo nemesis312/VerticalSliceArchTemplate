@@ -19,6 +19,7 @@ public class PokemonController: ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
+        //For reference (https://pokeapi.co/docs/v2#info)
         var query = new GetPokemonQuery { PokemonId = id };
     
         try
